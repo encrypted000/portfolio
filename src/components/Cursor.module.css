@@ -1,0 +1,28 @@
+.dot, .ring {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+
+.dot {
+  width: .8rem;
+  height: .8rem;
+  background: var(--accent);
+  transition: transform .1s ease;
+}
+
+.ring {
+  width: 3.6rem;
+  height: 3.6rem;
+  border: 1.5px solid var(--accent-glow);
+  transition: width .3s, height .3s, background .3s, transform .1s ease;
+}
+
+.ringHover {
+  width: 5rem;
+  height: 5rem;
+  background: rgba(245,158,42,.07);
+  border-color: var(--accent);
+}

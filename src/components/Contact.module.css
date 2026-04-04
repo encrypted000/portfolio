@@ -1,0 +1,30 @@
+.contact { background: var(--bg-2); overflow: hidden; }
+
+.glow { position: absolute; width: 70rem; height: 70rem; background: radial-gradient(circle,rgba(245,158,42,.06),transparent 70%); left: 50%; top: 50%; transform: translate(-50%,-50%); border-radius: 50%; filter: blur(100px); pointer-events: none; }
+
+.layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 6rem; align-items: start; }
+
+.blurb { font-size: 1.7rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 3.5rem; }
+
+.items { display: flex; flex-direction: column; gap: 2rem; margin-bottom: 3.5rem; }
+.item { display: flex; align-items: center; gap: 1.8rem; }
+.ciIcon { width: 5rem; height: 5rem; display: flex; align-items: center; justify-content: center; background: var(--accent-dim); border: 1px solid var(--border-hover); border-radius: var(--radius-sm); font-size: 2.2rem; color: var(--accent); flex-shrink: 0; }
+.item span { font-size: 1.3rem; color: var(--text-dim); display: block; margin-bottom: .2rem; }
+.item a { font-size: 1.6rem; font-weight: 500; color: var(--text); transition: .25s; }
+.item a:hover { color: var(--accent); }
+
+.availBadge { display: inline-flex; align-items: center; gap: 1rem; font-size: 1.4rem; font-weight: 500; color: var(--accent); background: var(--accent-dim); border: 1px solid var(--border-hover); padding: 1rem 2rem; border-radius: var(--radius-sm); }
+.availDot { width: .9rem; height: .9rem; border-radius: 50%; background: var(--accent); animation: pulse 1.5s ease-in-out infinite; }
+
+.form { display: flex; flex-direction: column; gap: 2rem; }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.formGroup { display: flex; flex-direction: column; gap: .8rem; }
+.formGroup label { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--text-muted); }
+.formGroup input, .formGroup textarea { font-family: var(--font-body); font-size: 1.5rem; color: var(--text); background: var(--bg-3); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.4rem 1.8rem; transition: .25s; resize: none; }
+.formGroup input::placeholder, .formGroup textarea::placeholder { color: var(--text-dim); }
+.formGroup input:focus, .formGroup textarea:focus { border-color: var(--accent); background: var(--bg-2); box-shadow: 0 0 1.5rem rgba(245,158,42,.07); }
+
+.sent { background: linear-gradient(135deg,#e07a10,#f59e2a) !important; }
+
+@media (max-width: 991px) { .layout { grid-template-columns: 1fr; gap: 4rem; } }
+@media (max-width: 768px) { .formRow { grid-template-columns: 1fr; } }

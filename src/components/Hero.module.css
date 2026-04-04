@@ -1,0 +1,115 @@
+.home {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 6rem; padding-top: 12rem; overflow: hidden;
+}
+
+.bgGrid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(245,158,42,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,158,42,.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+  pointer-events: none;
+}
+
+.glow { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: 0; }
+.glow1 { width: 60rem; height: 60rem; background: radial-gradient(circle,rgba(245,158,42,.1),transparent 70%); right: -15rem; top: -10rem; animation: glowFloat 8s ease-in-out infinite; }
+.glow2 { width: 40rem; height: 40rem; background: radial-gradient(circle,rgba(224,122,16,.07),transparent 70%); left: -10rem; bottom: 0; animation: glowFloat 10s ease-in-out infinite reverse; }
+
+.content { max-width: 65rem; z-index: 1; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: .8rem;
+  font-size: 1.4rem; font-weight: 500; color: var(--accent);
+  background: var(--accent-dim); border: 1px solid var(--border-hover);
+  padding: .6rem 1.6rem; border-radius: 5rem; margin-bottom: 2rem;
+}
+.badgeDot { width: .8rem; height: .8rem; background: var(--accent); border-radius: 50%; animation: pulse 1.5s ease-in-out infinite; }
+
+.content h3 { font-family: var(--font-display); font-size: 2.4rem; font-weight: 500; color: var(--text-muted); margin-bottom: .8rem; }
+.content h1 { font-family: var(--font-display); font-size: 7rem; font-weight: 800; line-height: 1; letter-spacing: -.03em; margin-bottom: 1.2rem; }
+.nameAccent { color: var(--accent); }
+.content h2 { font-family: var(--font-display); font-size: 2.8rem; font-weight: 600; color: var(--text-muted); margin-bottom: 2rem; min-height: 4rem; }
+.typed { color: var(--accent); }
+.cursor { color: var(--accent); animation: blink .7s infinite; }
+
+.intro { font-size: 1.8rem; font-weight: 500; color: var(--text); margin-bottom: 1.2rem; line-height: 1.6; }
+.desc { font-size: 1.6rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 3rem; }
+
+.btnSci { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+
+.stats { display: flex; align-items: center; gap: 3rem; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border); }
+.stat { display: flex; flex-direction: column; }
+.statNum { font-family: var(--font-display); font-size: 3.2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+.statLabel { font-size: 1.3rem; color: var(--text-muted); margin-top: .3rem; }
+.statDivider { width: 1px; height: 4rem; background: var(--border); }
+
+/* Orbit */
+.imgWrap { flex: 1; display: flex; justify-content: center; align-items: center; z-index: 1; }
+.orbit { position: relative; width: 44rem; height: 44rem; }
+
+/* Decorative dashed rings — purely visual, do NOT rotate */
+.orbitRing { position: absolute; border-radius: 50%; border: 1px dashed rgba(245,158,42,.2); pointer-events: none; }
+.ring1 { inset: 1rem; }
+.ring2 { inset: 5rem; }
+
+/* Each icon sits at center then is pushed out by its own keyframe */
+.orbitIcon {
+  position: absolute;
+  width: 4rem; height: 4rem;
+  top: 50%; left: 50%;
+  margin-top: -2rem; margin-left: -2rem;
+  background: var(--bg-3); border: 1px solid var(--border-hover);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; color: var(--accent);
+  box-shadow: 0 0 1rem var(--accent-glow);
+}
+
+/* Ring 1 icons — radius ~17rem, 3 icons evenly spaced, counter-rotate to stay upright */
+.ring1 .orbitIcon:nth-child(1) { animation: orbit1a 18s linear infinite; }
+.ring1 .orbitIcon:nth-child(2) { animation: orbit1b 18s linear infinite; }
+.ring1 .orbitIcon:nth-child(3) { animation: orbit1c 18s linear infinite; }
+
+/* Ring 2 icons — radius ~11rem, 2 icons, reverse direction */
+.ring2 .orbitIcon:nth-child(1) { animation: orbit2a 12s linear infinite; }
+.ring2 .orbitIcon:nth-child(2) { animation: orbit2b 12s linear infinite; }
+
+@keyframes orbit1a {
+  from { transform: rotate(0deg)   translateX(17rem) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(17rem) rotate(-360deg); }
+}
+@keyframes orbit1b {
+  from { transform: rotate(120deg)   translateX(17rem) rotate(-120deg); }
+  to   { transform: rotate(480deg)   translateX(17rem) rotate(-480deg); }
+}
+@keyframes orbit1c {
+  from { transform: rotate(240deg)   translateX(17rem) rotate(-240deg); }
+  to   { transform: rotate(600deg)   translateX(17rem) rotate(-600deg); }
+}
+@keyframes orbit2a {
+  from { transform: rotate(60deg)    translateX(11rem) rotate(-60deg); }
+  to   { transform: rotate(-300deg)  translateX(11rem) rotate(300deg); }
+}
+@keyframes orbit2b {
+  from { transform: rotate(240deg)   translateX(11rem) rotate(-240deg); }
+  to   { transform: rotate(-120deg)  translateX(11rem) rotate(120deg); }
+}
+
+.imgBox { position: absolute; inset: 8rem; display: flex; align-items: center; justify-content: center; }
+.imgBox img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid rgba(245,158,42,.3); box-shadow: 0 0 4rem var(--accent-glow); animation: floatImg 5s ease-in-out infinite; z-index: 2; }
+.imgGlow { position: absolute; inset: -2rem; border-radius: 50%; background: radial-gradient(circle,rgba(245,158,42,.18),transparent 70%); filter: blur(30px); animation: glowPulse 5s ease-in-out infinite; }
+
+@media (max-width: 768px) {
+  .home { flex-direction: column-reverse; text-align: center; padding-top: 14rem; }
+  .content { max-width: 100%; }
+  .btnSci, .stats { justify-content: center; }
+  .content h1 { font-size: 5.5rem; }
+  .orbit { width: 32rem; height: 32rem; }
+}
+@media (max-width: 480px) {
+  .content h1 { font-size: 4.5rem; }
+  .orbit { width: 26rem; height: 26rem; }
+  .statDivider { display: none; }
+}

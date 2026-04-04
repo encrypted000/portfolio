@@ -1,0 +1,176 @@
+/* ── DASHBOARD SHELL ── */
+.dash {
+  border-radius: 0 0 .4rem .4rem;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.dashHeader {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1.2rem 2rem; background: #060f06;
+  border-bottom: 1px solid #0f2a0f;
+}
+.dashDot {
+  width: .7rem; height: .7rem; border-radius: 50%;
+  background: #22c55e; box-shadow: 0 0 .8rem #22c55e;
+  animation: dp 1.5s ease-in-out infinite;
+}
+@keyframes dp { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
+.dashTitle { flex: 1; font-size: 1.2rem; letter-spacing: .1em; color: #2a6a2a; }
+.dashLive { font-size: 1.1rem; color: #22c55e; letter-spacing: .12em; animation: dp 2s infinite; }
+
+.dashPanels {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: #0a1a0a;
+}
+
+.panel {
+  background: #070f07;
+  padding: 2rem;
+}
+
+.panelLabel {
+  font-size: 1.1rem; letter-spacing: .08em; color: #2a5a2a;
+  margin-bottom: 1.5rem; border-bottom: 1px solid #0a1a0a;
+  padding-bottom: .8rem;
+}
+
+/* ── BAR CHART ── */
+.barChartWrap { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.barChart {
+  display: flex; align-items: flex-end; gap: .6rem;
+  height: 14rem; padding-bottom: 2.5rem;
+  border-left: 1px solid #0f2a0f;
+  border-bottom: 1px solid #0f2a0f;
+  position: relative;
+}
+
+.barCol {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-end;
+  position: relative; height: 100%;
+}
+
+.barValue {
+  font-size: 1rem; margin-bottom: .4rem;
+  font-weight: 700; letter-spacing: .04em;
+}
+
+.barTrack {
+  width: 100%; flex: 1; position: relative;
+  display: flex; align-items: flex-end;
+}
+
+.bar {
+  width: 100%; border-radius: 2px 2px 0 0;
+  min-height: 2px; transition: height .5s ease;
+  position: relative;
+}
+.barNormal { background: linear-gradient(to top, #16a34a, #4ade80); opacity: .7; }
+.barAlert  { background: linear-gradient(to top, #dc2626, #ef4444); box-shadow: 0 0 1rem rgba(239,68,68,.3); }
+
+.alertLine {
+  position: absolute; left: -100%; right: -100%;
+  height: 1px; background: rgba(239,68,68,.4);
+  border-top: 1px dashed rgba(239,68,68,.4);
+}
+
+.barLabel {
+  position: absolute; bottom: -2rem;
+  font-size: .95rem; color: #2a5a2a;
+  white-space: nowrap; letter-spacing: .03em;
+  left: 50%; transform: translateX(-50%);
+}
+
+.chartNote {
+  font-size: 1.15rem; color: #22c55e;
+  background: rgba(34,197,94,.04);
+  border-left: 2px solid rgba(34,197,94,.3);
+  padding: .8rem 1rem; border-radius: 0 .3rem .3rem 0;
+  line-height: 1.6;
+}
+
+/* ── STAT GRID ── */
+.statGrid { display: flex; flex-direction: column; gap: .6rem; }
+
+.statRow {
+  display: flex; align-items: center; gap: 1rem;
+  padding: .8rem 1rem; border: 1px solid #0a1a0a;
+  border-radius: .3rem; position: relative; transition: .15s;
+}
+.statAlert { border-color: rgba(34,197,94,.15) !important; background: rgba(34,197,94,.02); }
+
+.statKey { font-size: 1.15rem; color: #2a5a2a; flex: 1; }
+.statRight { display: flex; flex-direction: column; align-items: flex-end; gap: .2rem; }
+.statVal { font-size: 1.2rem; color: #4a7a4a; font-weight: 700; }
+.statValAlert { color: #4ade80 !important; }
+.statNormal { font-size: 1rem; color: #1a3a1a; }
+.statPip {
+  width: .5rem; height: .5rem; border-radius: 50%;
+  background: #22c55e; box-shadow: 0 0 .5rem #22c55e;
+  flex-shrink: 0;
+}
+
+/* ── FIRE GRID ── */
+.fireGridWrap { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.fireGrid {
+  display: grid; gap: .4rem;
+  background: #060f06; padding: 1rem; border-radius: .3rem;
+}
+
+.fireCell {
+  aspect-ratio: 1; border: 1px solid #0a1a0a;
+  border-radius: .2rem; display: flex;
+  align-items: center; justify-content: center;
+  background: #080f08; transition: .2s;
+}
+.fireCellHot {
+  background: rgba(239,68,68,.1) !important;
+  border-color: rgba(239,68,68,.3) !important;
+  box-shadow: 0 0 1rem rgba(239,68,68,.2);
+  animation: fireFlicker .6s ease-in-out infinite alternate;
+}
+@keyframes fireFlicker { from { opacity: .8; } to { opacity: 1; box-shadow: 0 0 1.5rem rgba(239,68,68,.4); } }
+.fireMark { font-size: 1.6rem; line-height: 1; }
+
+/* ── COMPARISON BARS ── */
+.compBars { display: flex; flex-direction: column; gap: 1.4rem; }
+
+.compRow { display: flex; flex-direction: column; gap: .6rem; }
+.compLabel { font-size: 1.2rem; color: #3a6a3a; }
+.compTracks { display: flex; flex-direction: column; gap: .5rem; }
+.compTrackWrap { display: flex; align-items: center; gap: 1rem; }
+.compTrackLabel { font-size: 1rem; color: #2a5a2a; min-width: 5rem; letter-spacing: .05em; }
+.compTrack { flex: 1; height: 1.2rem; background: #0a1a0a; border-radius: 2px; overflow: hidden; }
+.compBarOff { height: 100%; background: #2a5a2a; border-radius: 2px; transition: width 1s ease; }
+.compBarAct { height: 100%; background: linear-gradient(90deg, #dc2626, #ef4444); border-radius: 2px; transition: width 1s ease; box-shadow: 0 0 .8rem rgba(239,68,68,.3); }
+.compTrackVal { font-size: 1.1rem; min-width: 6rem; text-align: right; font-weight: 700; color: #4a7a4a; }
+
+/* ── TIMELINE ── */
+.timeline { display: flex; flex-direction: column; }
+
+.tlRow {
+  display: grid; grid-template-columns: 7rem 2.5rem 1fr;
+  align-items: flex-start; gap: 1rem; padding: .5rem 0;
+}
+.tlHot { background: rgba(34,197,94,.02); border-radius: .3rem; }
+
+.tlMonth { font-size: 1.1rem; color: #2a5a2a; padding-top: .2rem; letter-spacing: .05em; }
+.tlLine { display: flex; flex-direction: column; align-items: center; }
+.tlDot {
+  width: .9rem; height: .9rem; border-radius: 50%;
+  background: #0f2a0f; border: 2px solid #1a3a1a;
+  flex-shrink: 0; margin-top: .3rem; z-index: 1;
+}
+.tlDotHot { background: #22c55e; border-color: #22c55e; box-shadow: 0 0 .8rem rgba(34,197,94,.5); }
+.tlConnector { width: 2px; flex: 1; min-height: 2rem; background: #0f2a0f; margin-top: .2rem; }
+.tlContent { display: flex; flex-direction: column; gap: .3rem; padding-top: .1rem; }
+.tlLabel { font-size: 1.2rem; color: #5a8a5a; font-weight: 700; }
+.tlDetail { font-size: 1.1rem; color: #2a5a2a; line-height: 1.5; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .dashPanels { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,29 @@
+.portfolio { background: var(--bg-2); }
+
+.filters { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 5rem; flex-wrap: wrap; }
+.filterBtn { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--text-muted); background: var(--bg-3); border: 1px solid var(--border); padding: .8rem 2rem; border-radius: 5rem; cursor: pointer; transition: .25s; }
+.filterBtn:hover, .activeFilter { color: var(--bg) !important; background: var(--accent) !important; border-color: var(--accent) !important; box-shadow: 0 0 1.5rem var(--accent-glow); }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+
+.card { background: var(--bg-3); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: .35s; }
+.card:hover { border-color: var(--border-hover); transform: translateY(-6px); box-shadow: 0 2rem 4rem rgba(245,158,42,.09); }
+
+.cardImg { position: relative; height: 18rem; overflow: hidden; }
+.placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: rgba(245,158,42,.2); background: linear-gradient(135deg, var(--bg-2), var(--bg-3)); }
+
+.overlay { position: absolute; inset: 0; background: rgba(245,158,42,.08); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; gap: 1.5rem; opacity: 0; transition: .35s; }
+.card:hover .overlay { opacity: 1; }
+
+.cardLink { width: 4.5rem; height: 4.5rem; display: flex; align-items: center; justify-content: center; background: var(--bg); border: 1px solid var(--border-hover); border-radius: 50%; font-size: 2rem; color: var(--accent); transition: .25s; }
+.cardLink:hover { background: var(--accent); color: var(--bg); }
+
+.cardBody { padding: 2.5rem; }
+.cardTags { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+.cardTags span { font-size: 1.2rem; font-weight: 600; color: var(--accent); background: var(--accent-dim); padding: .3rem 1rem; border-radius: 5rem; }
+.card h3 { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.3; }
+.card p { font-size: 1.4rem; color: var(--text-muted); line-height: 1.7; }
+.cardImgPhoto { width: 100%; height: 100%; object-fit: cover; }
+
+@media (max-width: 1200px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px)   { .grid { grid-template-columns: 1fr; } }
