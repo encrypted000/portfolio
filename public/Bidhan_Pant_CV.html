@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bidhan Pant — CV</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    font-size: 9.8pt;
+    color: #1a1a1a;
+    background: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 44px;
+    line-height: 1.45;
+  }
+
+  /* HEADER */
+  .header { text-align: center; margin-bottom: 12px; }
+  .header h1 {
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #111;
+    margin-bottom: 5px;
+  }
+  .contact-line {
+    font-size: 8.8pt;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3px 12px;
+  }
+  .contact-line a { color: #1a1a1a; text-decoration: none; }
+  .contact-line .sep { color: #bbb; }
+
+  /* DIVIDERS */
+  .divider { border: none; border-top: 1.5px solid #1a1a1a; margin: 8px 0 5px; }
+  .divider-thin { border: none; border-top: 0.5px solid #ddd; margin: 6px 0; }
+
+  /* SECTIONS */
+  .section { margin-bottom: 10px; }
+  .section-title {
+    font-size: 8.8pt;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #111;
+    margin-bottom: 5px;
+  }
+
+  /* SUMMARY */
+  .summary p { font-size: 9.5pt; color: #222; line-height: 1.55; }
+
+  /* SKILLS */
+  .skills-grid { display: flex; flex-direction: column; gap: 2px; }
+  .skill-row { font-size: 9.3pt; line-height: 1.45; }
+
+  /* JOB */
+  .job { margin-bottom: 9px; }
+  .job-header {
+    font-size: 9.8pt;
+    margin-bottom: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 5px;
+  }
+  .job-title { font-weight: 700; color: #111; }
+  .job-sep { color: #bbb; }
+  .job-company { font-style: italic; color: #555; font-size: 9.3pt; }
+  .job-date { color: #444; font-size: 9pt; margin-left: auto; white-space: nowrap; }
+
+  .job-sublabel {
+    font-size: 9.3pt;
+    font-weight: 700;
+    color: #333;
+    margin: 4px 0 2px;
+  }
+
+  ul { padding-left: 14px; display: flex; flex-direction: column; gap: 1px; }
+  ul li { font-size: 9.3pt; color: #222; line-height: 1.5; }
+
+  /* EDUCATION */
+  .edu-item { margin-bottom: 5px; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .edu-degree { font-size: 9.8pt; font-weight: 700; }
+  .edu-grade { font-size: 9pt; color: #444; }
+  .edu-uni { font-size: 9pt; color: #555; font-style: italic; }
+
+  /* CERTS */
+  .certs { display: flex; flex-wrap: wrap; gap: 3px 20px; }
+  .certs span { font-size: 9.3pt; color: #222; }
+  .certs span::before { content: "• "; color: #888; }
+
+  /* PROJECTS — two column grid */
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 24px; }
+  .project { font-size: 9.3pt; color: #222; line-height: 1.5; }
+  .project strong { font-weight: 700; }
+  .project a { color: #1a1a1a; text-decoration: underline; text-decoration-color: #888; }
+
+  @page {
+    margin: 14mm 16mm;
+  }
+
+  @media print {
+    body { padding: 0; }
+    a { color: #1a1a1a !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Bidhan Pant</h1>
+  <div class="contact-line">
+    <span>England, United Kingdom</span>
+    <span class="sep">·</span>
+    <a href="mailto:biddi@bidhanpant.com">biddi@bidhanpant.com</a>
+    <span class="sep">·</span>
+    <span>+44 07771517853</span>
+    <span class="sep">·</span>
+    <a href="https://bidhanpant.com">bidhanpant.com</a>
+    <span class="sep">·</span>
+    <a href="https://www.linkedin.com/in/bidhan-pant/">LinkedIn</a>
+    <span class="sep">·</span>
+    <a href="https://github.com/encrypted000">GitHub</a>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- SUMMARY -->
+<div class="section summary">
+  <div class="section-title">Professional Summary</div>
+  <p>
+    Data Analytics professional with hands-on experience delivering end-to-end analytics solutions, from <strong>data pipelines and modelling</strong> to <strong>BI dashboards</strong> and stakeholder reporting. Proficient in <strong>Python, SQL, Power BI</strong>, and cloud tools including <strong>GCP</strong> and <strong>Databricks</strong>. Proven ability to translate complex datasets into clear, actionable insights that drive decisions at senior level. Background spanning analytics management, business intelligence, cybersecurity, and entrepreneurship.
+  </p>
+</div>
+
+<hr class="divider"/>
+
+<!-- SKILLS -->
+<div class="section">
+  <div class="section-title">Core Skills</div>
+  <div class="skills-grid">
+    <div class="skill-row"><strong>Programming & Data:</strong> Python (Pandas, NumPy, PySpark), R, SQL (PostgreSQL, MySQL, BigQuery), dbt, Databricks</div>
+    <div class="skill-row"><strong>Analytics & Statistics:</strong> Regression, Hypothesis Testing, Exploratory Data Analysis, Clustering, Data Quality & Validation</div>
+    <div class="skill-row"><strong>BI & Visualisation:</strong> Power BI (DAX, Data Modelling), Tableau, Looker Studio, Advanced Excel & Power Query</div>
+    <div class="skill-row"><strong>Cloud & Platforms:</strong> Google Cloud Platform (BigQuery, GCS), Databricks, Jupyter Notebooks, Git</div>
+    <div class="skill-row"><strong>Professional:</strong> Stakeholder Engagement, Data Governance, GDPR Compliance, Agile Collaboration, Technical Documentation</div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- EXPERIENCE -->
+<div class="section">
+  <div class="section-title">Professional Experience</div>
+
+  <!-- UKKA -->
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Data Analytics Manager</span>
+      <span class="job-sep">·</span>
+      <span class="job-company">The UK Kidney Association (UKKA), Bristol, UK</span>
+      <span class="job-date">May 2025 – Present</span>
+    </div>
+    <div class="job-sublabel">Core Analytics & Data Engineering</div>
+    <ul>
+      <li>Manage large-scale <strong>data registry operations</strong>, overseeing <strong>GDPR-compliant</strong> data collection, governance, and quality audits across multiple NHS institutional sites nationwide.</li>
+      <li>Design and execute complex <strong>SQL</strong> and <strong>PySpark</strong> pipelines to extract, validate, transform, and enrich large clinical datasets for research and operational reporting.</li>
+      <li>Develop and maintain the <strong>RaDaR dashboard</strong>, a nationwide reporting platform enabling researchers, clinicians, and data teams to monitor <strong>patient-level data completeness</strong> and <strong>cohort-based analytics</strong> across all UK kidney disease registry sites.</li>
+      <li>Build structured <strong>validation frameworks</strong> and maintain <strong>data dictionaries</strong>, audit trails, and workflow documentation to support governance compliance and senior stakeholder reporting.</li>
+    </ul>
+    <div class="job-sublabel" style="margin-top: 12px;">LifeArc Paediatric Data Lead</div>
+    <ul>
+      <li>Led data collection and recruitment across <strong>13 paediatric institutional sites</strong>, supporting automated data integration workflows and meeting defined quality benchmarks.</li>
+      <li>Developed automated <strong>PDF extraction pipelines</strong> for genetic and biopsy reports, enabling the statistics team to incorporate structured clinical data into downstream analytical workflows.</li>
+      <li>Produced monthly <strong>recruitment and completeness reports</strong> for senior leadership and external partners; collaborated directly with clinicians and researchers to define data requirements and reporting standards.</li>
+    </ul>
+  </div>
+
+  <hr class="divider-thin"/>
+
+  <!-- College -->
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Data Administrator</span>
+      <span class="job-sep">·</span>
+      <span class="job-company">Bournemouth & Poole College, Bournemouth</span>
+      <span class="job-date">Oct 2024 – Mar 2025</span>
+    </div>
+    <ul>
+      <li>Ensured high <strong>data integrity</strong> and <strong>regulatory compliance</strong> across management information and funding datasets for a large further education institution.</li>
+      <li>Analysed large <strong>student datasets</strong> to support <strong>funding accuracy</strong>, operational reporting, and regulatory submissions to governing bodies.</li>
+      <li>Developed <strong>performance dashboards</strong> tracking enrolment, retention, and outcomes; provided database validation guidance and technical support to academic and administrative staff.</li>
+    </ul>
+  </div>
+
+  <!-- PwC -->
+  <div class="job" style="break-before: page; page-break-before: always; padding-top: 4px;">
+    <div class="job-header">
+      <span class="job-title">BI Data Analyst</span>
+      <span class="job-sep">·</span>
+      <span class="job-company">PwC Switzerland (Forage Virtual Experience)</span>
+      <span class="job-date">Jun 2024 – Oct 2024</span>
+    </div>
+    <ul>
+      <li>Analysed <strong>HR, workforce, and engagement datasets</strong> to surface performance trends, diversity insights, and operational KPIs for senior leadership.</li>
+      <li>Designed and built interactive <strong>Power BI dashboards</strong> to communicate executive-level insights; conducted <strong>root-cause analysis</strong> on workforce imbalance using statistical techniques.</li>
+      <li>Delivered structured insight reports aligned with professional <strong>consulting and stakeholder communication</strong> standards.</li>
+    </ul>
+  </div>
+
+  <hr class="divider-thin"/>
+
+  <!-- Caim -->
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Co-Founder & Technical Lead</span>
+      <span class="job-sep">·</span>
+      <span class="job-company">Caim Technologies (CaimTech), Kathmandu, Nepal</span>
+      <span class="job-date">Aug 2020 – Jan 2023</span>
+    </div>
+    <ul>
+      <li>Co-founded a <strong>cybersecurity firm</strong> offering <strong>penetration testing</strong>, security audits, and web application assessments to clients across multiple industries.</li>
+      <li>Built and operated a proprietary <strong>bug bounty platform</strong> enabling independent researchers to identify and disclose vulnerabilities, modelled on <strong>HackerOne and Bugcrowd</strong>.</li>
+      <li>Developed internal <strong>dashboards</strong> to track submissions, researcher performance, and client SLAs; managed end-to-end client relationships and business operations.</li>
+    </ul>
+  </div>
+
+</div>
+
+<hr class="divider"/>
+
+<!-- PROJECTS -->
+<div class="section">
+  <div class="section-title">Key Projects</div>
+  <div class="projects-grid">
+    <div class="project"><strong>1. <a href="https://github.com/encrypted000/data-warehouse-project" target="_blank">Data Warehouse & Analytics</a></strong>: Built a modern data warehouse using <strong>SQL Server</strong> with <strong>Medallion Architecture</strong> (Bronze/Silver/Gold), including ETL processes, dimensional modelling, and an analytics reporting layer.</div>
+    <div class="project"><strong>2. <a href="https://github.com/encrypted000/System-Architecture-JobPulse-Data-Pipeline" target="_blank">JobPulse: UK Job Market Analytics Pipeline</a></strong>: Built a job market analytics platform using <strong>Python, PostgreSQL, FastAPI</strong> and <strong>Streamlit</strong> to ingest UK job listings via APIs, transform data, and visualise hiring trends and skill demand.</div>
+    <div class="project"><strong>3. <a href="https://www.bidhanpant.com/querynoir" target="_blank">QueryNoir: SQL Learning Platform</a></strong>: Built an interactive detective game teaching <strong>SQL</strong> through investigative data scenarios, combining data storytelling with full-stack product thinking.</div>
+    <div class="project"><strong>4. <a href="https://caimtech.com/programs.html" target="_blank">Bug Bounty Platform (CaimTech)</a></strong>: Designed and operated a <strong>vulnerability disclosure platform</strong> handling researcher submissions, client reporting, and SLA tracking, built from scratch.</div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- EDUCATION -->
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="edu-item">
+    <div class="edu-header">
+      <span class="edu-degree">MSc Data Science & Artificial Intelligence</span>
+      <span class="edu-grade">Distinction</span>
+    </div>
+    <div class="edu-uni">Bournemouth University · 2024</div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-header">
+      <span class="edu-degree">BSc Computer Networking & IT Security</span>
+      <span class="edu-grade">Distinction</span>
+    </div>
+    <div class="edu-uni">London Metropolitan University · 2020</div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- CERTIFICATIONS -->
+<div class="section">
+  <div class="section-title">Certifications</div>
+  <div class="certs">
+    <span>Google Data Analytics Professional Certificate</span>
+    <span>Databricks Fundamentals</span>
+    <span>dbt Fundamentals</span>
+    <span>Advanced SQL – HackerRank</span>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<p style="font-size:8.5pt; color:#999; text-align:center; margin-top:18px; font-style:italic;">References available upon request</p>
+
+</body>
+</html>
