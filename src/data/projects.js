@@ -20,6 +20,17 @@ const projects = [
     desc: 'This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.',
     github: 'https://github.com/encrypted000/data-warehouse-project',
   },
+
+  {
+    id: 3,
+    icon: 'bx bx-trending-up',
+    category: 'analytics',
+    image: '/images/TRS.png',
+    tags: ['Data Analytics', 'Desktop App', 'SQLite', 'Dashboard', 'Inventory Management', 'Finance'],
+    title: 'Real-Time Business Analytics Dashboard',
+    desc: 'Profit Pilot is a single-file desktop application that gives a small business real-time visibility into its numbers without internet, without subscriptions, without complexity. Everything lives in one SQLite file on the user machine.',
+    github: 'https://github.com/encrypted000/profit-pilot',
+  },
 ]
 
 export default projects
