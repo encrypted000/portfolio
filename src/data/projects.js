@@ -36,7 +36,7 @@ const projects = [
     id: 4,
     icon: 'bx bx-trending-up',
     category: 'pipeline',
-    image: '/images/nhs.png',
+    image: '/images/nhs_pipeline.png',
     tags: ['dbt', 'SQL', 'PostgreSQL', 'Data Engineering', 'ELT', 'Data Modelling', 'Healthcare Analytics', 'Snapshots', 'Incremental Models'],
     title: 'NHS Patient Data Pipeline',
     desc: 'A healthcare data pipeline built with dbt that transforms raw NHS patient records into clean, analysis-ready models. Includes patient visit summaries, CKD staging, incremental lab results, and patient snapshots — with custom macros for NHS number validation and eGFR categorisation.',
