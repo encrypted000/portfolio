@@ -31,6 +31,17 @@ const projects = [
     desc: 'Profit Pilot is a single-file desktop application that gives a small business real-time visibility into its numbers without internet, without subscriptions, without complexity. Everything lives in one SQLite file on the user machine.',
     github: 'https://github.com/encrypted000/profit-pilot',
   },
+
+  {
+    id: 4,
+    icon: 'bx bx-trending-up',
+    category: 'pipeline',
+    image: '/images/nhs.png',
+    tags: ['dbt', 'SQL', 'PostgreSQL', 'Data Engineering', 'ELT', 'Data Modelling', 'Healthcare Analytics', 'Snapshots', 'Incremental Models'],
+    title: 'NHS Patient Data Pipeline',
+    desc: 'A healthcare data pipeline built with dbt that transforms raw NHS patient records into clean, analysis-ready models. Includes patient visit summaries, CKD staging, incremental lab results, and patient snapshots — with custom macros for NHS number validation and eGFR categorisation.',
+    github: 'https://github.com/encrypted000/dbt-patient-pipeline',
+  },
 ]
 
 export default projects
